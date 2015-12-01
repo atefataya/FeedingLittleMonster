@@ -15,6 +15,7 @@ class DragImg: UIImageView {
     //to call the parent initializers
     
     var originalPosition: CGPoint! // to save the first position
+    var dropTarget: UIView?
     
     override init(frame: CGRect) {
        super.init(frame: frame)
@@ -35,6 +36,17 @@ class DragImg: UIImageView {
         }
     }
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        if let touch = touches.first ,  let target = dropTarget {
+            
+            let position = touch.locationInView(self.superview)
+            
+            if CGRectContainsPoint(target.frame, position) {
+                // This function will check if the position is on the monster
+                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "onTargetDropped", object: nil))
+            }
+        }
+        
         self.center = originalPosition
     }
 }

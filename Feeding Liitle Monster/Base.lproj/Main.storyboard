@@ -47,7 +47,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="wah-BI-ges">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idle1" translatesAutoresizingMaskIntoConstraints="NO" id="wah-BI-ges" customClass="MonsterImg" customModule="Feeding_Liitle_Monster" customModuleProvider="target">
                                 <rect key="frame" x="-5" y="189" width="535" height="374"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="374" id="1q1-eJ-gkM"/>
@@ -129,6 +129,9 @@
                         <outlet property="foodImage" destination="miB-uf-8fG" id="VrN-Eu-9io"/>
                         <outlet property="heartImage" destination="g2X-Bv-k2Z" id="5Qk-h1-rov"/>
                         <outlet property="monsterImage" destination="wah-BI-ges" id="ePj-sg-baC"/>
+                        <outlet property="penalty1Img" destination="qWZ-RE-G9e" id="D3q-nJ-Aem"/>
+                        <outlet property="penalty2Img" destination="X3a-6F-TXg" id="a69-cQ-UB7"/>
+                        <outlet property="penalty3Img" destination="JRx-l3-1cj" id="VBu-yI-ePF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
