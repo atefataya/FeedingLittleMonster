@@ -13,6 +13,7 @@
 		DDF6B2571C0DB0B100A64226 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDF6B2561C0DB0B100A64226 /* Assets.xcassets */; };
 		DDF6B25A1C0DB0B100A64226 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDF6B2581C0DB0B100A64226 /* LaunchScreen.storyboard */; };
 		DDF6B2621C0E2BDA00A64226 /* DragImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF6B2611C0E2BDA00A64226 /* DragImg.swift */; settings = {ASSET_TAGS = (); }; };
+		DDF6B2641C0E405A00A64226 /* MonsterImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF6B2631C0E405A00A64226 /* MonsterImg.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		DDF6B2591C0DB0B100A64226 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDF6B25B1C0DB0B100A64226 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDF6B2611C0E2BDA00A64226 /* DragImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImg.swift; sourceTree = "<group>"; };
+		DDF6B2631C0E405A00A64226 /* MonsterImg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImg.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				DDF6B24F1C0DB0B100A64226 /* AppDelegate.swift */,
 				DDF6B2511C0DB0B100A64226 /* ViewController.swift */,
 				DDF6B2611C0E2BDA00A64226 /* DragImg.swift */,
+				DDF6B2631C0E405A00A64226 /* MonsterImg.swift */,
 				DDF6B2531C0DB0B100A64226 /* Main.storyboard */,
 				DDF6B2561C0DB0B100A64226 /* Assets.xcassets */,
 				DDF6B2581C0DB0B100A64226 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF6B2641C0E405A00A64226 /* MonsterImg.swift in Sources */,
 				DDF6B2621C0E2BDA00A64226 /* DragImg.swift in Sources */,
 				DDF6B2521C0DB0B100A64226 /* ViewController.swift in Sources */,
 				DDF6B2501C0DB0B100A64226 /* AppDelegate.swift in Sources */,

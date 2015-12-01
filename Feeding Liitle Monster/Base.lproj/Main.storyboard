@@ -57,10 +57,10 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-PP-Kgl">
                                 <rect key="frame" x="162" y="91" width="290" height="98"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="g2X-Bv-k2Z">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="g2X-Bv-k2Z" customClass="DragImg" customModule="Feeding_Liitle_Monster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="98"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="miB-uf-8fG">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="miB-uf-8fG" customClass="DragImg" customModule="Feeding_Liitle_Monster" customModuleProvider="target">
                                         <rect key="frame" x="195" y="0.0" width="95" height="98"/>
                                     </imageView>
                                 </subviews>
@@ -126,6 +126,8 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="foodImage" destination="miB-uf-8fG" id="VrN-Eu-9io"/>
+                        <outlet property="heartImage" destination="g2X-Bv-k2Z" id="5Qk-h1-rov"/>
                         <outlet property="monsterImage" destination="wah-BI-ges" id="ePj-sg-baC"/>
                     </connections>
                 </viewController>
