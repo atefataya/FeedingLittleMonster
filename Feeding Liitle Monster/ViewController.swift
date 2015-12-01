@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var penalty2Img: UIImageView!
     @IBOutlet weak var penalty3Img: UIImageView!
     
+    @IBOutlet weak var restartLable: UIButton!
+    
+    
     let DIM_ALPHA: CGFloat = 0.2
     let OPAQUE: CGFloat = 1.0
     let MAX_PENALTIES = 3
@@ -38,6 +41,15 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        initializeGame()
+      
+    }
+    
+    func initializeGame(){
+        
+        self.restartLable.hidden = true
+        
+        
         foodImage.dropTarget = monsterImage
         heartImage.dropTarget = monsterImage
         
@@ -48,7 +60,7 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "itemDroppedOnCharacter:", name: "onTargetDropped", object: nil)
         
         do {
-//            try! musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
+            //            try! musicPlayer = AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!))
             let resourcePath = NSBundle.mainBundle().pathForResource("cave-music", ofType: "mp3")!
             let url = NSURL(fileURLWithPath: resourcePath)
             try! musicPlayer = AVAudioPlayer(contentsOfURL: url)
@@ -63,13 +75,13 @@ class ViewController: UIViewController {
             sfxHeart.prepareToPlay()
             sfxDeath.prepareToPlay()
             sfxSkull.prepareToPlay()
-
+            
         } catch let err as NSError {
             print(err.debugDescription)
         }
         
         startTimer()
-      
+        
     }
     
     func itemDroppedOnCharacter(notif: AnyObject) {
@@ -120,7 +132,9 @@ class ViewController: UIViewController {
             
             if penalties >= MAX_PENALTIES {
                 gameOver()
-                sfxDeath.play() 
+                sfxDeath.play()
+                self.restartLable.hidden = false
+                
             }
         }
         
@@ -149,5 +163,19 @@ class ViewController: UIViewController {
         monsterImage.playDeathAnimation()
         
     }
+    
+    @IBAction func restartButtonTapped(sender: AnyObject) {
+        
+        penalties = 0
+        currentItem = 0
+        monsterImage.playIdleAnimation()
+        
+        initializeGame()
+        
+        
+    }
+    
+    
+    
 }
 

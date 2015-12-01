@@ -79,6 +79,14 @@
                                     </mask>
                                 </variation>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-uO-jbV">
+                                <rect key="frame" x="31" y="208" width="101" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9w9-D3-sKA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -97,8 +105,10 @@
                             <constraint firstItem="BSW-QO-NRJ" firstAttribute="centerY" secondItem="yQa-nG-LRh" secondAttribute="centerY" id="gWx-Pi-Ajo"/>
                             <constraint firstItem="Wrj-7i-dmP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gkF-Ea-tdP"/>
                             <constraint firstItem="BSW-QO-NRJ" firstAttribute="centerX" secondItem="yQa-nG-LRh" secondAttribute="centerX" id="i9c-Tb-woE"/>
+                            <constraint firstItem="f1m-uO-jbV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ikQ-rV-4nq"/>
                             <constraint firstItem="Odl-PP-Kgl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lsQ-3U-Fle"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Odl-PP-Kgl" secondAttribute="trailing" constant="-7" id="mWe-4n-E0B"/>
+                            <constraint firstItem="f1m-uO-jbV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qVC-GW-Lax"/>
                             <constraint firstItem="Odl-PP-Kgl" firstAttribute="top" secondItem="BSW-QO-NRJ" secondAttribute="bottom" constant="15" id="r2X-Gv-OoL"/>
                             <constraint firstAttribute="trailing" secondItem="Wrj-7i-dmP" secondAttribute="trailing" id="vCo-12-2bP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wah-BI-ges" secondAttribute="bottom" constant="37" id="zw9-mE-lXf"/>
@@ -132,6 +142,7 @@
                         <outlet property="penalty1Img" destination="qWZ-RE-G9e" id="D3q-nJ-Aem"/>
                         <outlet property="penalty2Img" destination="X3a-6F-TXg" id="a69-cQ-UB7"/>
                         <outlet property="penalty3Img" destination="JRx-l3-1cj" id="VBu-yI-ePF"/>
+                        <outlet property="restartLable" destination="f1m-uO-jbV" id="Qll-Rx-5tA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
